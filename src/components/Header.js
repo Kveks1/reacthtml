@@ -6,15 +6,15 @@ class Header extends React.Component {
     render() {
         return (
             <header>
-            <div class="club-logo">
+            <div className="club-logo">
                 <a href="/" aria-label="Hjem">
-                    <img src="assets/images/Logo.svg" alt="" />
+                    <img src="/assets/images/Logo.svg" alt="" />
                     <span>BODØ BOKSEKLUBB</span>
                 </a>
             </div>
 
             <input type="checkbox" id="hamburger-toggle" aria-hidden="true" />
-            <label for="hamburger-toggle" class="hamburger-btn" aria-label="Åpne meny">
+            <label htmlFor="hamburger-toggle" className="hamburger-btn" aria-label="Åpne meny">
                 <span></span>
                 <span></span>
                 <span></span>

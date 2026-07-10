@@ -4,18 +4,18 @@ class BodoBokseklubb extends React.Component {
     render() {
         return (
         <main>
-            <section class="welcome-section">
-                <video autoplay muted loop playsinline disablePictureInPicture class="background-video" aria-hidden="true">
-                    <source src="assets/videos/front_page.mp4" type="video/mp4"/>
+            <section className="welcome-section">
+                <video autoPlay muted loop playsInline disablePictureInPicture className="background-video" aria-hidden="true">
+                    <source src="/assets/videos/front_page.mp4" type="video/mp4"/>
                 </video>
 
                 <h1>Bygg styrke. Bygg karakter. <br /> Med oss i Bodø Bokseklubb</h1>
             </section>
 
-            <section class="train-with-us">
-                <img src="assets/images/boxing_gloves.jpg" alt="Boksehansker" />
+            <section className="train-with-us">
+                <img src="/assets/images/boxing_gloves.jpg" alt="Boksehansker" />
 
-                <div class="text-panel">
+                <div className="text-panel">
                     <h2>TREN MED OSS</h2>
 
                     <p>
@@ -25,8 +25,8 @@ class BodoBokseklubb extends React.Component {
                 </div>
             </section>
 
-            <section class="tradition-for-development">
-                <div class="text-panel">
+            <section className="tradition-for-development">
+                <div className="text-panel">
                     <h2>TRADISJON FOR UTVIKLING</h2>
 
                     <p>
@@ -35,13 +35,13 @@ class BodoBokseklubb extends React.Component {
                     </p>
                 </div>
 
-                <img src="assets/images/female_boxer.jpg" alt="En av våre kvinnelige boksere" />
+                <img src="/assets/images/female_boxer.jpg" alt="En av våre kvinnelige boksere" />
             </section>
 
-            <section class="strong-community">
-                <img src="assets/images/group_photo.jpg" alt="En gruppe som trener sammen" />
+            <section className="strong-community">
+                <img src="/assets/images/group_photo.jpg" alt="En gruppe som trener sammen" />
 
-                <div class="text-panel">
+                <div className="text-panel">
                     <h2>ET STERKT FELLESSKAP</h2>
 
                     <p>
@@ -50,20 +50,20 @@ class BodoBokseklubb extends React.Component {
                 </div>
             </section>
 
-            <div class="become-member-btn">
-                <div class="btn-container">
-                    <a href="pages/priser.html" class="btn" aria-label="Bli medlem">BLI MEDLEM</a>
+            <div className="become-member-btn">
+                <div className="btn-container">
+                    <a href="/priser" className="btn" aria-label="Bli medlem">BLI MEDLEM</a>
                 </div>
             </div>
 
-            <section class="sponsors">
-                <div class="headline">
+            <section className="sponsors">
+                <div className="headline">
                    <h2>VÅRE SAMARBEIDSPARTNERE</h2> 
                 </div>
 
-                <div class="sponsor-logos">
-                    <img src="assets/images/bodoe_energi_logo.svg" alt="Logo til Bodø Energi" />
-                    <img src="assets/images/oestboe_logo.svg" alt="Logo til Østbø" />
+                <div className="sponsor-logos">
+                    <img src="/assets/images/bodoe_energi_logo.svg" alt="Logo til Bodø Energi" />
+                    <img src="/assets/images/oestboe_logo.svg" alt="Logo til Østbø" />
                 </div>
             </section>
         </main>
