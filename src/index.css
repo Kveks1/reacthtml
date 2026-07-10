@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Montserrat&display=swap");
 
 *, *::before, *::after { box-sizing: border-box; }
 
 html { font-size: 16px; line-height: 1.5; background: #0A0A0A; color: #fff; color-scheme: dark; }
-body { margin: 0; min-height: 100vh; font-family: "Roboto", system-ui, sans-serif; }
-a { color: inherit; text-decoration: none; font-family: "Oswald", system-ui, sans-serif; font-size: 1.75rem; font-weight: bold; }
-span { color: inherit; font-family: "Oswald", system-ui, sans-serif; font-size: 2.5rem; font-weight: bold; }
-h1, h2 { font-family: "Oswald", system-ui, sans-serif; font-weight: bold; }
+body { margin: 0; min-height: 100vh; font-family: "Roboto", system-ui, -apple-system, sans-serif; }
+a { color: inherit; text-decoration: none; font-family: "Oswald", system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: bold; }
+span { color: inherit; font-family: "Oswald", system-ui, -apple-system, sans-serif; font-size: 2.5rem; font-weight: bold; }
+h1, h2 { font-family: "Oswald", system-ui, -apple-system, sans-serif; font-weight: bold; }
 h1 { font-size: 48px; }
 h2 { font-size: 32px; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -43,9 +43,11 @@ nav[aria-label="Kontaktinformasjon"] a:hover, nav[aria-label="Kontaktinformasjon
   #hamburger-toggle:checked ~ .hamburger-btn span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
   #hamburger-toggle:checked ~ .hamburger-btn span:nth-child(2) { opacity: 0; }
   #hamburger-toggle:checked ~ .hamburger-btn span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-  header nav[aria-label="Hovednavigasjon"] { display: none; }
+  /* Keep the membership CTA available even while the rest of the menu is closed. */
+  header nav[aria-label="Hovednavigasjon"] { display: block; order: 3; margin-left: 1rem; }
   header nav[aria-label="Hovednavigasjon"] ul { gap: .5rem; }
-  .menu-link { display: block; width: 100%; text-align: center; } #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] { display: block; order: 4; width: 100%; margin-left: 0; }
+  /* This selector must outrank the general link rule below, otherwise every menu link remains visible. */
+  header nav[aria-label="Hovednavigasjon"] .menu-link { display: none; width: 100%; text-align: center; } #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] { order: 4; width: 100%; margin-left: 0; }
   #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] ul { flex-direction: column; width: 100%; padding-top: 1rem; }
   #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] .menu-link { display: block; }
   header nav[aria-label="Hovednavigasjon"] li a { display: block; padding: .5rem 0; }
