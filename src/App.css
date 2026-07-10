@@ -178,6 +178,7 @@ main:has(.prices) { padding-inline: 4rem; }
 
   main:has(.prices) { padding-inline: 1rem; }
   .headline { flex-direction: column; align-items: flex-start; }
+  .sponsors .headline { align-items: center; }
   .headline a, .headline .schedule-link { margin-bottom: .75rem; }
   .training-description { gap: 1.25rem; }
   .contact-info > div { grid-template-columns: 1fr; }
