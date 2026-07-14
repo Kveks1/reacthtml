@@ -5,7 +5,7 @@ const trainingLevels = [
     {
         id: 'barn',
         label: 'Barn',
-        tag: 'Aldersgruppe 6–12 år',
+        tag: 'Aldersgruppe 6-12 år',
         heading: 'Trygg og leken start på boksetrening',
         text: 'Barnetreningen fokuserer på koordinasjon, lek, grunnteknikk og mestring i trygge rammer. Vi legger vekt på god stemning og å bygge selvtillit fra første økt.',
         details: [
@@ -66,7 +66,7 @@ class Trening extends React.Component {
                         <p>
                             Hos Bodø Bokseklubb legger vi vekt på trygge, inkluderende og lærerike treninger for både nye og erfarne utøvere. 
                             Våre økter gir en solid innføring i grunnleggende bokseteknikk, samtidig som du får trent styrke, koordinasjon og kondisjon. 
-                            <br></br>
+                            <br />
                             Alle som trener hos oss må være innmeldt i klubben før oppstart, og vi anbefaler å møte opp med treningsklær, innesko og drikkeflaske. 
                             Målet vårt er å skape et miljø der alle kan utvikle seg i sitt eget tempo og oppleve mestring i ringen.
                         </p>
