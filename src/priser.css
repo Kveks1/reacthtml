@@ -1,0 +1,60 @@
+main.priser-page {
+	padding: 0 4rem;
+}
+
+main.priser-page .prices {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem 0 2rem;
+	color: #0A0A0A;
+}
+
+main.priser-page .prices a.price-card {
+	display: flex;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	background-color: #B30000;
+	padding: 1.25rem 1.5rem;
+	border-radius: 12px;
+}
+
+main.priser-page .prices a.price-card:hover,
+main.priser-page .prices a.price-card:focus-visible {
+	filter: brightness(1.08);
+	outline: 2px solid #0A0A0A;
+	outline-offset: 2px;
+}
+
+main.priser-page .prices .price-card h2 {
+	margin: 0;
+}
+
+main.priser-page .prices .price-card h2:first-of-type {
+	text-align: left;
+}
+
+main.priser-page .prices .price-card h2:last-of-type {
+	text-align: right;
+}
+
+@media (max-width: 1024px) {
+	main.priser-page {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	main.priser-page {
+		padding: 0 1rem;
+	}
+
+	main.priser-page .prices .price-card h2 {
+		font-size: 1.25rem;
+	}
+}

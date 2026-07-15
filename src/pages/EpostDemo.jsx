@@ -1,9 +1,10 @@
 import React from 'react';
+import '../epost-demo.css';
 
 class EpostDemo extends React.Component {
     render() {
         return (
-            <main>
+            <main className="epost-demo-page">
                 <section className="email-demo">
                     <h1>E-postskjema</h1>
                     <p>Dette er en enkel demoside som viser hvordan et e-postskjema kan se ut.</p>

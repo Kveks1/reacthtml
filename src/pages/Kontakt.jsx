@@ -1,9 +1,10 @@
 import React from 'react';
+import '../kontakt.css';
 
 class Kontakt extends React.Component {
     render() {
         return (
-            <main>
+            <main className="kontakt-page">
                 <section className="headline">
                     <h1>Kontakt oss</h1>
                     <a href="#map" className="map-link">Se Beliggenhet</a>

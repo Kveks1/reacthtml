@@ -1,5 +1,6 @@
 import React from 'react';
 import TrainingLevelSelector from '../components/TrainingLevelSelector';
+import '../trening.css';
 
 const trainingLevels = [
     {
@@ -55,7 +56,7 @@ const trainingLevels = [
 class Trening extends React.Component {
     render() {
         return (
-            <main>
+            <main className="trening-page">
                 <section className="headline">
                     <h1>Treninger</h1>
                     <a href="#training-schedule" className="schedule-link">SE TRENINGSTIDER</a>

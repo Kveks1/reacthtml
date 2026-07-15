@@ -1,9 +1,10 @@
 import React from 'react';
+import '../aktuelt.css';
 
 class Aktuelt extends React.Component {
     render() {
         return (
-            <main>
+            <main className="aktuelt-page">
                 <section className="news-headline">
                     <h1>Aktuelt</h1>
                 </section>

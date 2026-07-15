@@ -1,9 +1,10 @@
 import React from "react";
+import '../bodobokseklubb.css';
 
 class BodoBokseklubb extends React.Component {
     render() {
         return (
-        <main>
+        <main className="home-page">
             <section className="welcome-section">
                 <video autoPlay muted loop playsInline disablePictureInPicture className="background-video" aria-hidden="true">
                     <source src="/assets/videos/front_page.mp4" type="video/mp4"/>

@@ -1,0 +1,393 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: "Oswald", system-ui, -apple-system, sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+span {
+    color: inherit;
+    font-family: "Oswald", system-ui, -apple-system, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #0A0A0A;
+    color: #ffffff;
+    color-scheme: light dark;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: "Oswald", system-ui, -apple-system, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Oswald", system-ui, -apple-system, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+header nav[aria-label="Hovednavigasjon"] ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a {
+    transition: all 0.3s ease;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a:hover,
+header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a:focus-visible {
+    color: #B30000;
+    border-bottom: 2px solid #B30000;
+    outline: none;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a.is-active,
+header nav[aria-label="Hovednavigasjon"] li:not(:last-child).is-active a {
+    color: #B30000;
+    border-bottom: 2px solid #B30000;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:last-child a {
+    background-color: #B30000;
+    color: #0A0A0A;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:last-child a:hover,
+header nav[aria-label="Hovednavigasjon"] li:last-child a:focus-visible {
+    background-color: #ffffff;
+    color: #B30000;
+    outline: none;
+}
+
+header nav[aria-label="Hovednavigasjon"] li:last-child a.is-active,
+header nav[aria-label="Hovednavigasjon"] li:last-child.is-active a {
+    background-color: #ffffff;
+    color: #B30000;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    gap: 2rem;
+}
+
+footer nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.club-logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+footer .club-logo a {
+    padding: 0;
+}
+
+.club-logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.club-logo.footer img {
+    width: 100px;
+    height: 100px;
+}
+
+nav[aria-label="Sosiale medier"] a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+nav[aria-label="Sosiale medier"] img {
+    width: 24px;
+    height: 24px;
+}
+
+nav[aria-label="Kontaktinformasjon"] a {
+    transition: all 0.3s ease;
+}
+
+nav[aria-label="Kontaktinformasjon"] a:hover,
+nav[aria-label="Kontaktinformasjon"] a:focus-visible {
+    color: #B30000;
+    border-bottom: 2px solid #B30000;
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    span {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    a {
+        font-size: 1.15rem;
+    }
+
+    header {
+        padding: 0.5rem 1rem 0.25rem;
+    }
+
+    .club-logo a {
+        padding: 0;
+        gap: 0.65rem;
+    }
+
+    .club-logo img,
+    .club-logo.footer img {
+        width: 72px;
+        height: 72px;
+    }
+
+    main {
+        width: 100%;
+        overflow-x: clip;
+    }
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.hamburger-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+#hamburger-toggle:checked ~ .hamburger-btn span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+#hamburger-toggle:checked ~ .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+}
+#hamburger-toggle:checked ~ .hamburger-btn span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        order: 3;
+    }
+    
+    header nav[aria-label="Hovednavigasjon"] {
+        order: 2;
+        margin-left: auto;
+    }
+
+    header nav[aria-label="Hovednavigasjon"] ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .menu-link {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] {
+        order: 4;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] ul {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+    }
+    
+    #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] .menu-link {
+        display: block;
+    }
+    
+    header nav[aria-label="Hovednavigasjon"] li a {
+        padding: 0.5rem 0;
+        display: block;
+    }
+
+    header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a:hover,
+    header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a:focus-visible {
+        border-bottom: none;
+        color: #B30000;
+    }
+
+    header nav[aria-label="Hovednavigasjon"] li:not(:last-child) a.is-active,
+    header nav[aria-label="Hovednavigasjon"] li:not(:last-child).is-active a {
+        border-bottom: none;
+        color: #B30000;
+    }
+
+    header nav[aria-label="Hovednavigasjon"] li:last-child a {
+        padding: 0.5rem 1rem;
+        display: inline-block;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10rem;
+        row-gap: 1rem;
+        text-align: center;
+    }
+
+    footer .club-logo.footer {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer nav ul {
+        justify-content: center;
+    }
+
+    main {
+        padding-inline: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .join-btn {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    #hamburger-toggle:checked ~ nav[aria-label="Hovednavigasjon"] .join-btn {
+        display: block;
+    }
+    
+    .hamburger-btn {
+        margin-left: auto;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    border: none;
+    background-color: #B30000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus-visible {
+    background-color: #ffffff;
+    color: #B30000;
+    outline: none;
+}
+
+.scroll-to-top:active {
+    transform: translateY(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-to-top {
+        transition: none;
+    }
+}
