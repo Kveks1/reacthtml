@@ -1,13 +1,9 @@
-import React from 'react';
-
-class Footer extends React.Component {
-    render() {
-        return (
-            <footer>
+function Footer() {
+    return (
+        <footer>
             <div className="club-logo footer">
                 <a href="/" aria-label="Hjem">
                     <img src="/assets/images/Logo.svg" alt="" />
-
                     <span>BODØ BOKSEKLUBB</span>
                 </a>
             </div>
@@ -26,7 +22,7 @@ class Footer extends React.Component {
                                 <img src="/assets/icons/instagram.svg" alt="" />
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="https://www.facebook.com/BodoBokseklubb" aria-label="Facebook">
                                 <img src="/assets/icons/facebook.svg" alt="" />
@@ -35,9 +31,8 @@ class Footer extends React.Component {
                     </ul>
                 </nav>
             </div>
-            </footer>
-        );
-    }
+        </footer>
+    );
 }
 
 export default Footer;

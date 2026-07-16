@@ -1,5 +1,6 @@
-import React from 'react';
+import PageHero from '../components/PageHero';
 import TrainingLevelSelector from '../components/TrainingLevelSelector';
+import { TrainingIntro, TrainingSchedule } from '../components/TrainingSections';
 import '../trening.css';
 
 const trainingLevels = [
@@ -53,68 +54,30 @@ const trainingLevels = [
     },
 ];
 
-class Trening extends React.Component {
-    render() {
-        return (
-            <main className="trening-page">
-                <section className="headline">
-                    <h1>Treninger</h1>
-                    <a href="#training-schedule" className="schedule-link">SE TRENINGSTIDER</a>
-                </section>
+function Trening() {
+    return (
+        <main className="trening-page">
+            <PageHero
+                title="Treninger"
+                action={{
+                    href: '#training-schedule',
+                    className: 'schedule-link',
+                    label: 'SE TRENINGSTIDER',
+                }}
+            />
 
-                <div className="training-description">
-                    <div className="text-body">
-                        <p>
-                            Hos Bodø Bokseklubb legger vi vekt på trygge, inkluderende og lærerike treninger for både nye og erfarne utøvere. 
-                            Våre økter gir en solid innføring i grunnleggende bokseteknikk, samtidig som du får trent styrke, koordinasjon og kondisjon. 
-                            <br />
-                            Alle som trener hos oss må være innmeldt i klubben før oppstart, og vi anbefaler å møte opp med treningsklær, innesko og drikkeflaske. 
-                            Målet vårt er å skape et miljø der alle kan utvikle seg i sitt eget tempo og oppleve mestring i ringen.
-                        </p>
-                    </div>
+            <TrainingIntro />
 
-                    <div className="training-video">
-                        <video controls aria-label="Treningsvideo">
-                            <source src="/assets/videos/boksetrening.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-                </div>
+            <TrainingLevelSelector
+                title="Hvilken treningsgruppe passer for deg?"
+                description="Trykk på en av knappene under for å se hva de ulike gruppene fokuserer på."
+                levels={trainingLevels}
+                defaultLevelId="barn"
+            />
 
-                <TrainingLevelSelector
-                    title="Hvilken treningsgruppe passer for deg?"
-                    description="Trykk på en av knappene under for å se hva de ulike gruppene fokuserer på."
-                    levels={trainingLevels}
-                    defaultLevelId="barn"
-                />
-
-                <section className="training-schedule" id="training-schedule">
-                    <h2>Treningstider</h2>
-
-                    <div className="week-nav" aria-hidden="false">
-                        <button className="nav-btn prev-week" aria-label="Forrige uke">◀</button>
-                        <div className="month-label" aria-hidden="true"></div>
-                        <button className="nav-btn next-week" aria-label="Neste uke">▶</button>
-                    </div>
-
-                    <div className="calendar-area">
-                        <aside className="legend" aria-label="Forklaring på treningstyper">
-                            <ul>
-                                <li><span className="legend-swatch barn"></span> Barn</li>
-                                <li><span className="legend-swatch voksne"></span> Voksne</li>
-                                <li><span className="legend-swatch bokseskole"></span> Bokseskole</li>
-                                <li><span className="legend-swatch sparring"></span> Sparring</li>
-                            </ul>
-                        </aside>
-
-                        <div className="calendar-wrapper">
-                            <div className="calendar" role="grid" aria-label="Treningskalender">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        );
-    }
+            <TrainingSchedule legendItems={trainingLevels} />
+        </main>
+    );
 }
 
 export default Trening;

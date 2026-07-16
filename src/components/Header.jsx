@@ -1,11 +1,8 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import {NavLink} from "react-router-dom";
-
-class Header extends React.Component {
-    render() {
-        return (
-            <header>
+function Header() {
+    return (
+        <header>
             <div className="club-logo">
                 <a href="/" aria-label="Hjem">
                     <img src="/assets/images/Logo.svg" alt="" />
@@ -28,9 +25,8 @@ class Header extends React.Component {
                     <li><NavLink to="/priser" className="join-btn">BLI MEDLEM</NavLink></li>
                 </ul>
             </nav>
-            </header>
-        );
-    }
+        </header>
+    );
 }
 
 export default Header;
