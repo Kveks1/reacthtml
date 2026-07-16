@@ -1,4 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import ActiveNavigation from './ActiveNavigation';
+
+const navigationLinks = [
+    { to: '/kontakt', label: 'Kontakt oss', className: 'menu-link' },
+    { to: '/trening', label: 'Trening', className: 'menu-link' },
+    { to: '/aktuelt', label: 'Aktuelt', className: 'menu-link' },
+    { to: '/priser', label: 'BLI MEDLEM', className: 'join-btn' },
+];
 
 function Header() {
     return (
@@ -17,14 +24,7 @@ function Header() {
                 <span></span>
             </label>
 
-            <nav aria-label="Hovednavigasjon">
-                <ul>
-                    <li><NavLink to="/kontakt" className="menu-link">Kontakt oss</NavLink></li>
-                    <li><NavLink to="/trening" className="menu-link">Trening</NavLink></li>
-                    <li><NavLink to="/aktuelt" className="menu-link">Aktuelt</NavLink></li>
-                    <li><NavLink to="/priser" className="join-btn">BLI MEDLEM</NavLink></li>
-                </ul>
-            </nav>
+            <ActiveNavigation links={navigationLinks} />
         </header>
     );
 }

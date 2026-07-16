@@ -10,8 +10,6 @@ import Footer from "./components/Footer";
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-import './training_selector.css';
-
 function App() {
   return (
     <div>
