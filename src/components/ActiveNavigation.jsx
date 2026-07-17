@@ -20,7 +20,7 @@ function ActiveNavigation({ links }) {
                             <Link
                                 to={to}
                                 className={`${className ?? ''}${isActive ? ' is-active' : ''}`}
-                                //onClick={() => setActivePath(to)}
+                                onClick={() => setActivePath(to)}
                             >
                                 {label}
                             </Link>
