@@ -20,8 +20,7 @@ function ActiveNavigation({ links }) {
                             <Link
                                 to={to}
                                 className={`${className ?? ''}${isActive ? ' is-active' : ''}`}
-                                aria-current={isActive ? 'page' : undefined}
-                                onClick={() => setActivePath(to)}
+                                //onClick={() => setActivePath(to)}
                             >
                                 {label}
                             </Link>
