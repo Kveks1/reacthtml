@@ -1,29 +1,27 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const normalizePath = (path) => path.toLowerCase().replace(/\/+$/, '') || '/';
-
 function ActiveNavigation({ links }) {
     const { pathname } = useLocation();
-    const [activePath, setActivePath] = useState(() => normalizePath(pathname));
+    const [activePath, setActivePath] = useState(pathname);
 
     useEffect(() => {
-        setActivePath(normalizePath(pathname));
+        setActivePath(pathname);
     }, [pathname]);
 
     return (
         <nav aria-label="Hovednavigasjon">
             <ul>
                 {links.map(({ to, label, className }) => {
-                    const isActive = normalizePath(to) === activePath;
+                    const isActive = to === activePath;
 
                     return (
                         <li key={to} className={isActive ? 'is-active' : undefined}>
                             <Link
                                 to={to}
-                                className={`${className}${isActive ? ' is-active' : ''}`}
+                                className={`${className ?? ''}${isActive ? ' is-active' : ''}`}
                                 aria-current={isActive ? 'page' : undefined}
-                                onClick={() => setActivePath(normalizePath(to))}
+                                onClick={() => setActivePath(to)}
                             >
                                 {label}
                             </Link>
