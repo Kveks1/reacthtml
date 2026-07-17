@@ -1,5 +1,5 @@
 import { FeatureSection, MemberCallToAction, SponsorsSection, VideoHero } from '../components/HomePageSections';
-import '../bodobokseklubb.css';
+import '../css/bodobokseklubb.css';
 
 function BodoBokseklubb() {
     return (

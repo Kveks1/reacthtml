@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero';
 import { TrainingIntro, TrainingSchedule } from '../components/TrainingSections';
-import '../trening.css';
+import '../css/trening.css';
 
 const trainingLevels = [
     { id: 'barn', label: 'Barn' },

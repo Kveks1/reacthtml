@@ -1,5 +1,5 @@
 import EmailForm from '../components/EmailForm';
-import '../epost-demo.css';
+import '../css/epost-demo.css';
 
 function EpostDemo() {
     return (

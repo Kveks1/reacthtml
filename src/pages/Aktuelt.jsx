@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero';
 import { NewsFeed, NewsFilter, PaginationTargets } from '../components/NewsSections';
-import '../aktuelt.css';
+import '../css/aktuelt.css';
 
 const newsPages = [
     {

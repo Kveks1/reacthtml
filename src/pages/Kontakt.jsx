@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero';
 import { ContactInfo, ContactMap } from '../components/ContactSections';
-import '../kontakt.css';
+import '../css/kontakt.css';
 
 const contactPeople = [
     {
